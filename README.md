@@ -1,5 +1,17 @@
 # Globox A/B Test: Food and Drink Banner
 
+### Table of Contents
+- [Project Overview](#project-overview)
+- [Data Source](#data-source)
+- [Tools](#tools)
+- [Data Cleaning/Preparation](#data-cleaningpreparation)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Data Analysis](#data-analysis)
+- [Other Insights](#other-insights)
+- [Statistical Analysis](#statistical-analysis)
+- [Results/Findings](#resultsfindings)
+- [Recommedations](#recommedations)
+
 ### Project Overview
 GloBox (fictional company) wants to bring awareness about food & drink product catgeory to increase the revenue, hence decided to add food & drink banner at top of the website.
 Growth team decided to run A/B test in order to prove the website without banner(control group) or with banner (treatment group) which one is performs better to achieve the desired goal (increase in revenue).
@@ -26,6 +38,9 @@ Data used for analysis are stored in PostgreSQL database. Below are the tables d
   - **dt:** date of purchase activity
   - **device:** the device type the user purchased on (I = iOS, A = android)
   - **spent:** the purchase amount in USD
+
+<img width="531" alt="Tables relation" src="https://github.com/VimalVikash-Sigamani/Globox-A-B-Testing/assets/161229746/24ec3983-6bee-4530-b3d9-b2bbeee5a1df">
+
 
 ### Tools
 - PostgreSQL - Data Cleaning and Data Analysis
@@ -132,9 +147,24 @@ EDA involved in exploring the A/B test data to answer some questions, such as:
    ```
 ### Other Insights
 - Disturbation of amount spent.
+  
+  <img width="625" alt="Disturbation of amount spent" src="https://github.com/VimalVikash-Sigamani/Globox-A-B-Testing/assets/161229746/b5639513-2ad8-4235-9683-84f2bef3d6ba">
+
 - Relationship between the test metrics (conversion rate and average amount spent) and the user’s device.
+
+  <img width="664" alt="Device insights" src="https://github.com/VimalVikash-Sigamani/Globox-A-B-Testing/assets/161229746/d563abf6-2884-4d4f-ae48-99e7e6bbe437">
+
+  
 - Relationship between the test metrics (conversion rate and average amount spent) and the user’s gender.
+
+  <img width="667" alt="Gender insights" src="https://github.com/VimalVikash-Sigamani/Globox-A-B-Testing/assets/161229746/bcf4157e-51cf-44ed-a728-f048541d52e5">
+
+
 - Novelty effects
+
+  <img width="592" alt="Novelty effect" src="https://github.com/VimalVikash-Sigamani/Globox-A-B-Testing/assets/161229746/91dfdda4-ca20-46ed-9ca2-63cf697444e7">
+
+  
 
 ### Statistical Analysis
 We measured below two key metrices and Hypothesis testing is done on these metrices to determine the outcome of A/B testing.

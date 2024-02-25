@@ -4,6 +4,10 @@
 GloBox (fictional company) wants to bring awareness about food & drink product catgeory to increase the revenue, hence decided to add food & drink banner at top of the website.
 Growth team decided to run A/B test in order to prove the website without banner(control group) or with banner (treatment group) which one is performs better to achieve the desired goal (increase in revenue).
 
+
+<img width="466" alt="AB test" src="https://github.com/VimalVikash-Sigamani/Globox-A-B-Testing/assets/161229746/58d00a7a-a65a-4667-abd7-426974888917">
+
+
 ### Data Source
 Data used for analysis are stored in PostgreSQL database. Below are the tables details 
 - **users:** user demographic information
@@ -71,6 +75,12 @@ EDA involved in exploring the A/B test data to answer some questions, such as:
    SELECT grp, CONCAT(ROUND(CAST(conv_rate AS NUMERIC), 2), '%') AS conversion_rate
    FROM CTE1;
    ```
+
+
+   <img width="629" alt="Conversion rate per group" src="https://github.com/VimalVikash-Sigamani/Globox-A-B-Testing/assets/161229746/07dc3d4a-b9d1-4b56-8399-21da02d3c78e">
+
+
+
 3. What is the average amount spent per user for the control and treatment groups, including users who did not convert?
 
    ```sql
@@ -84,6 +94,10 @@ EDA involved in exploring the A/B test data to answer some questions, such as:
    GROUP BY grp
    ORDER BY grp;
    ```
+
+   <img width="626" alt="Average amount spent per group" src="https://github.com/VimalVikash-Sigamani/Globox-A-B-Testing/assets/161229746/ce07bf27-d809-4a0f-a939-3acc57d0145b">
+
+   
 4. Extract the user ID, user’s country, user’s gender, user’s device type, user’s test group, whether or not they converted (spent > $0), and how much they spent in total ($0+).
 
    ```sql
@@ -116,6 +130,11 @@ EDA involved in exploring the A/B test data to answer some questions, such as:
    JOIN groups grp
 		   ON CTE2.id = grp.uid;
    ```
+### Other Insights
+- Disturbation of amount spent.
+- Relationship between the test metrics (conversion rate and average amount spent) and the user’s device.
+- Relationship between the test metrics (conversion rate and average amount spent) and the user’s gender.
+- Novelty effects
 
 ### Statistical Analysis
 We measured below two key metrices and Hypothesis testing is done on these metrices to determine the outcome of A/B testing.

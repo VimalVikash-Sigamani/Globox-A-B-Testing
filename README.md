@@ -35,9 +35,14 @@ In the initial data preparation phase, we performed the following tasks
 3. Data cleaning & formatting.
 
 ### Exploratory Data Analysis (EDA)
+EDA involved in exploring the A/B test data to answer some questions, such as:
+1. What was the conversion rate of all users?
+2. What is the user conversion rate for the control and treatment groups?
+3. What is the average amount spent per user for the control and treatment groups, including users who did not convert?
+4. Extract the user ID, user’s country, user’s gender, user’s device type, user’s test group, whether or not they converted (spent > $0), and how much they spent in total ($0+).
 
 ### Data Analysis
-EDA involved in exploring the A/B test data to answer some questions, such as:
+
 1. What was the conversion rate of all users?
    
    ```sql
@@ -123,7 +128,7 @@ We measured below two key metrices and Hypothesis testing is done on these metri
 	 - Null Hypothesis H0: u1 = u2
    - Alternative Hypothesis H1: u1 != u2
 
-Google sheet is used to perform Hypothesis testing and Confidence interval calculation using Z-TEST and T-TEST model. Refer the sheet <include link to the google sheets> for detailed calculations.
+Google sheet is used to perform Hypothesis testing and Confidence interval calculation using Z-TEST and T-TEST model. [Click here](https://docs.google.com/spreadsheets/d/1GU7lqwdvYfTGoxPXMLb5SucVjKEtxCC-vlK9KNT1xH8/edit#gid=392375140) for detailed calculations.
 
  **Conversion rate:**
 - Z-Test is used to measure the Conversion rate.

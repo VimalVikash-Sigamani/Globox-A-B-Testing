@@ -13,7 +13,7 @@
 - [Recommedations](#recommedations)
 
 ### Project Overview
-GloBox (fictional company) wants to bring awareness about food & drink product catgeory to increase the revenue, hence decided to add food & drink banner at top of the website.
+GloBox (fictional company) wants to bring awareness about food & drink product category to increase the revenue, hence decided to add food & drink banner at top of the website.
 Growth team decided to run A/B test in order to prove the website without banner(control group) or with banner (treatment group) which one is performs better to achieve the desired goal (increase in revenue).
 
 
